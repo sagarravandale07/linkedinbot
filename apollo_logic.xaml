@@ -1,0 +1,264 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="apollo_logic" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_counter" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>apollo_logic_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="apollo_logic" sap:VirtualizedContainerService.HintSize="1173.6000000000001,642.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="email_id_hr" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click  apollo extension" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0a732e0a-73b9-415d-b48a-dce493ea0083" InformativeScreenshot="70bc57ec3bab8bf77a82c773e75e829f" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl id='linkedin-sidebar-iframe' tag='IFRAME' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Image 'access email" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9cffc88d-8ed8-42df-926a-6a0b768513a7" Selector="&lt;html app='chrome.exe' title='*| LinkedIn' /&gt;" TimeoutMS="8000" WaitForReady="COMPLETE" />
+      </ui:ClickImage.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ClickImage>
+    <ui:HoverImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" KeyModifiers="{x:Null}" SendWindowMessages="{x:Null}" DisplayName="Hover Image email" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="HoverImage_1">
+      <ui:HoverImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:HoverImage.CursorPosition>
+      <ui:HoverImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAkCAYAAADCW8lNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOFSURBVFhH7ZaLT1JRHMf7R6tl73RagQipvLRSe1iKPUStZupmOmUNY4WEo7JBPvCB+MKFDwgzBFQ0277dc4pTN88KvOCk4faZ4zx+9/fZ73fPPUfi8Tj+R3Ji2UZOLNvIiaWbQDAEz/Q8wuF17rxUDlTMvxRAdf0TnLl8FUcvqBmFqhtoaTchGo1x9+2HAxN7aR/EqYuVIqE/kWvuYNb3kbs/VQ5EzDrwniWvqjTgrOwaCpQ1uKCowvniKpFcXpFeqOwKN04qZFxseeUTq5Sm5iGCoTW8c43BOTyJmXk/xj1zeNTxXJCsZnLl1+9ja2uLGy9ZMi7W2mlmCSsrDFgX3iPyF16PwjE4IlQniN3dbzBZBkStOjoxzY2XLBkXu1LZwJKVqWvxJRyhYqufw8gvqcY5+XW4RjzY2NhC5e1mtraj28KNlywZFVv7EmaJEsqrHuBmQyttyWLtXRzL19BxtTAej2/jsdCSbK3QjryYySJJLBaLoaurCzqdDjKZbA+FlxQsUYWuDsNjXgy5vbhcXsvGCaRqb51u+q4lxsgBw3tmskgSs1gsTEKv18NgMIioq69niZL3Z3xqDovLn1BQUkPHyMnYJrTcM5MV1XVPqExivf6mkfvMZJEk1tLSwsRKS0vh8/n2rPm9Ovcfd9ODYuDdEG3FW/eeIr69Q9+5Ce88ThZVsLWkLf+MlQqSxBobG6mU2Wym/8vKyrCwsCBaY3phZ8meFm4c5ldvsLPzFdHYJtZ+HiSR6IZI7HiBFnM+vyhOqqRFLBgMwm63Mzm//1dSm5ubUAnHfEKOJF/7oA02hwuv33yglSGtaGztZYdJW1ef6Dn7IW1i5HdCTq1WY2lpia2bmvbRKiTk/gZp3Ug0yvbul7SKEWw2Gx3TaDRYWflxNfJ6vZAVK5FXUM6VSWBo7hS+c+m57addjNDX10fHyWfAZDJBpVJBLpfD6XSix2wTDo1W+rE+UagTZMtwpeIOBl1uUQypZESMkJAjKBQKuFyuPWvcbjed7+np2TMnlYyJEWZmZmC1WrG4uMidT4j19vZy56WQUbF/cWgrZjQaaWKBQIA7/y9GR0cPZ8Xa29tpYuS+6PF4UmJychJNTU10f39/Pze+FCSJzc7OQqlU0uT2i1arxerqKje+FCSJEUKhEBwOB71WpQo5KSORCDeuVCSLHVZyYtlGTizbyIllF3F8BzTBGSGJ7h8OAAAAAElFTkSuQmCC" />
+      </ui:HoverImage.Image>
+      <ui:HoverImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7577bd8e-f02f-460f-80b3-da11393ac1fc" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:HoverImage.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:HoverImage>
+    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
+      <ui:SetToClipboard.Text>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:SetToClipboard.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:SetToClipboard>
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'copy" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHoSURBVEhL7ZbPKwRhGMf9ESJyQeHAwc3BRZLkpMSBkuTqZxEphy2FVtEqK3JxUUoulBJaSXvzs5bag6V2Le0277xzfbzfmSa7s+/MzrZlKYfPYWbeeT7PO+/7vM8UJZMKFYq/IQ88MGqc51Q8oqVRPqGR90ilREL+nhOu5M8RhZo8nEpGNaqb1ahhzqBqKr8EXMkPg4zKxjXqWecU//y+7zlQ8/oCjvJ3IXoSs/afMl0wsMnTnpvyvg1OFZM85wRs5Wd3jGrFJzZn5iTfu2K0G2A5JyCVv0QValk01rhtmVPnirHRrPLVY0OO5zsXKg1tG9duE5DKLx8ZVU8b4ohIBDOTyZFkhzezAkDNjEbBUHpcK1L5+T2jSrGT20Xg1xizlQMk5zthNCxmDQa3VH258D7iWMenkrfcCsbjvX+5bIzJ75fvXzO97Pr9PGv5YAOiSlAtqBrZGBNX8pswo3pxlpeOadS1ZuxqOyBGojgnUIqy+Cau5LhnnmD4/NlAqeGEtMa14loOYh8KhcRZb6VXNBxI0QPQC9ATUuPZIZWbJ1zzgkbht8znqUDU7eN610P3k42xQyqPxpm+tpgNerbZv2Wgv2ON0e/R92Xx7JDKwa3YZK1L7tYYfzj405HFccJW/hP8ywuAQl+MLL/No1ERugAAAABJRU5ErkJggg==" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5e8f3122-274c-4321-8c03-6248acf915ef" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:ClickImage.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ClickImage>
+    <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="GetFromClipboard_1">
+      <ui:GetFromClipboard.Result>
+        <OutArgument x:TypeArguments="x:String">[email_id_hr]</OutArgument>
+      </ui:GetFromClipboard.Result>
+    </ui:GetFromClipboard>
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image minimize" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAiCAYAAAAd6YoqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABsSURBVFhH7dGxCcAwDAXR7OxhPI43MHgNL2BUKY2rdDEpjnAPfis4dOVPGEJjCI0hNIbQGEJjCI0hNIbQGEJjyNOcM3vvrzfGyLXWvnLuk5CIyFprllKO1lrbl875ERpDaAyhMYTGEBpDWDJveFdNRcm9wKUAAAAASUVORK5CYII=" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="138709cb-4a90-42b4-9c0a-5154304ab4a8" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:ClickImage.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ClickImage>
+    <ui:WriteCell Cell="[&quot;D&quot;+in_counter.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="linkedin_jobs" Text="[email_id_hr]" WorkbookPath="linkined_job.xlsx" />
+  </Sequence>
+</Activity>
